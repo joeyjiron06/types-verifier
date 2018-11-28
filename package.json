@@ -1,0 +1,48 @@
+{
+  "name": "types-verifier",
+  "version": "1.0.0-alpha.1",
+  "description": "A super tiny library that verifies types",
+  "scripts": {
+    "lint": "eslint \"*.js\"",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joeyjiron06/types-verifier.git"
+  },
+  "keywords": [
+    "types-verifier",
+    "prop-types",
+    "types-validator",
+    "types",
+    "validator",
+    "check-type",
+    "type-checking",
+    "type-checker"
+  ],
+  "author": "Joey Jiron <joeyjiron06@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joeyjiron06/types-verifier/issues"
+  },
+  "homepage": "https://github.com/joeyjiron06/types-verifier#readme",
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^22.1.0",
+    "husky": "^1.2.0",
+    "jest": "^23.6.0",
+    "lint-staged": "^8.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "*.js": "eslint"
+    }
+  }
+}
