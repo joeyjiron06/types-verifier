@@ -27,4 +27,5 @@ steps:
         from_secret: NPM_PASSWORD
       email: joeyjiron06@gmail.com
     when:
-      branch: master
+      branch:
+        - master
