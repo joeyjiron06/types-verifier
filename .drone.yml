@@ -17,7 +17,7 @@ steps:
       token:
         from_secret: CODECOV_TOKEN
       files:
-        - coverage/clover.xml
+        - coverage/coverage-final.json
   - name: publish
     image: plugins/npm
     settings:
