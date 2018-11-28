@@ -1,6 +1,8 @@
 # types-verifier
 
 [![Build Status](https://cloud.drone.io/api/badges/joeyjiron06/types-verifier/status.svg)](https://cloud.drone.io/joeyjiron06/types-verifier)
+[![codecov](https://codecov.io/gh/joeyjiron06/types-verifier/branch/master/graph/badge.svg)](https://codecov.io/gh/joeyjiron06/types-verifier)
+
 
 A super lightweight runtime type checking for javascript values ands objects. Very similar to [prop-types](https://github.com/facebook/prop-types), expect that this package solves [this issue](https://github.com/facebook/prop-types/issues/34) with `prop-types`.
 
@@ -93,3 +95,10 @@ https://github.com/andnp/ValidTyped
 https://github.com/david-martin/types-validator
 
 Those projects are great, but I really need a validator like `prop-types` that will return ALL the error messages when I check on object againts a type definition. When debugging and finding out what is wrong with your software, it is VERY helpful to have really good error messages, which is why I love `prop-types` so much. None of the libraries above give you all the errors. That is why i decided to create this package.
+
+## Tech Stack
+
+- [drone.io](https://cloud.drone.io) for CI/CD
+- [jest](https://jestjs.io/) for testing 
+- [eslint](https://eslint.org/) for linting
+- [codecov](https://codecov.io/) for code coverage

@@ -1,6 +1,6 @@
 {
   "name": "types-verifier",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "description": "A super tiny library that verifies types",
   "scripts": {
     "lint": "eslint \"*.js\"",

@@ -2,12 +2,21 @@ kind: pipeline
 name: default
 
 steps:
-  - name: test
+  - name: install
     image: node:8
     commands:
       - npm install
+  - name: test
+    image: node:8
       - npm run lint
-      - npm test
+      - npm test -- --coverage
+  - name: coverage
+    image: plugins/codecov
+    settings:
+      token:
+        from_secret: CODECOV_TOKEN
+      files:
+        - coverage/clover.xml
   - name: publish
     image: plugins/npm
     settings:
