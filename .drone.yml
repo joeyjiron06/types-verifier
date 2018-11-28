@@ -8,6 +8,7 @@ steps:
       - npm install
   - name: test
     image: node:8
+    commands:
       - npm run lint
       - npm test -- --coverage
   - name: coverage
