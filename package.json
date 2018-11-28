@@ -4,7 +4,7 @@
   "description": "A super tiny library that verifies types",
   "scripts": {
     "lint": "eslint \"*.js\"",
-    "test": "jest"
+    "test": "jest --coverage --no-cache"
   },
   "repository": {
     "type": "git",

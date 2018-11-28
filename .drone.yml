@@ -10,7 +10,7 @@ steps:
     image: node:8
     commands:
       - npm run lint
-      - npm test -- --coverage
+      - npm test
   - name: coverage
     image: plugins/codecov
     settings:
