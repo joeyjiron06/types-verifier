@@ -1,0 +1,20 @@
+kind: pipeline
+name: default
+
+steps:
+  - name: test
+    image: node:8
+    commands:
+      - npm install
+      - npm run lint
+      - npm test
+  - name: npm
+    image: plugins/npm
+    settings:
+      username:
+        from_secret: NPM_USERNAME
+      password:
+        from_secret: NPM_PASSWORD
+      email: joeyjiron06@gmail.com
+    when:
+      branch: master

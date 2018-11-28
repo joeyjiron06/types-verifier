@@ -1,5 +1,7 @@
 # types-verifier
 
+[![Build Status](https://cloud.drone.io/api/badges/joeyjiron06/types-verifier/status.svg)](https://cloud.drone.io/joeyjiron06/types-verifier)
+
 A super lightweight runtime type checking for javascript values ands objects. Very similar to [prop-types](https://github.com/facebook/prop-types), expect that this package solves [this issue](https://github.com/facebook/prop-types/issues/34) with `prop-types`.
 
 
