@@ -10,14 +10,14 @@ steps:
     image: node:8
     commands:
       - npm run lint
-      - npm test -- --coverage
+      - npm test
   - name: coverage
     image: plugins/codecov
     settings:
       token:
         from_secret: CODECOV_TOKEN
       files:
-        - coverage/clover.xml
+        - coverage/coverage-final.json
   - name: publish
     image: plugins/npm
     settings:
@@ -27,4 +27,5 @@ steps:
         from_secret: NPM_PASSWORD
       email: joeyjiron06@gmail.com
     when:
-      branch: master
+      branch:
+        - master
