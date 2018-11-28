@@ -16,8 +16,8 @@ npm install --save types-verifier
 ## Importing
 
 ```javascript
-import PropTypes from 'prop-types'; // ES6
-var PropTypes = require('prop-types'); // ES5 with npm
+import Types from 'types-verifier'; // ES6
+var Types = require('types-verifier'); // ES5 with npm
 ```
 
 ## Usage
@@ -30,34 +30,34 @@ import Types from 'types-verifier';
 const UserType = {
   // You can declare that a prop is a specific JS primitive. By default, these
   // are all optional. To make it required just add .isRequired to any validator
-  array: PropTypes.array,
-  bool: PropTypes.bool,
-  func: PropTypes.func,
-  number: PropTypes.number,
-  object: PropTypes.object,
-  string: PropTypes.string,
+  array: Types.array,
+  bool: Types.bool,
+  func: Types.func,
+  number: Types.number,
+  object: Types.object,
+  string: Types.string,
 
   // You can ensure that your prop is limited to specific values by treating
   // it as an enum.
-  enum: PropTypes.oneOf(['News', 'Photos']),
+  enum: Types.oneOf(['News', 'Photos']),
 
   // An array of a certain type
-  arrayOf: PropTypes.arrayOf(PropTypes.number),
+  arrayOf: Types.arrayOf(Types.number),
 
 
   
   // An object taking on a particular shape
-  objectWithShape: PropTypes.shape({
-    property: PropTypes.string,
-    requiredProperty: PropTypes.number.isRequired
+  objectWithShape: Types.shape({
+    property: Types.string,
+    requiredProperty: Types.number.isRequired
   }),
 
 
   //
-  requiredFunc: PropTypes.func.isRequired,
+  requiredFunc: Types.func.isRequired,
 
   // A value of any data type
-  requiredAny: PropTypes.any.isRequired,
+  requiredAny: Types.any.isRequired,
 
 
   // You can also specify a custom verifier. It should return an Error
