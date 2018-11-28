@@ -8,7 +8,7 @@ steps:
       - npm install
       - npm run lint
       - npm test
-  - name: npm
+  - name: publish
     image: plugins/npm
     settings:
       username:
