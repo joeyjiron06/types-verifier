@@ -55,7 +55,7 @@ const UserType = {
   }),
 
 
-  //
+  // a required function
   requiredFunc: Types.func.isRequired,
 
   // A value of any data type
@@ -65,7 +65,7 @@ const UserType = {
   // You can also specify a custom verifier. It should return an Error
   // object if the validation fails. Don't `console.warn` or throw;
   // it should return null if verification succeeds.
-  customProp: Types.create function(value, propName) {
+  customProp: Types.createTypeVerifier(value, propName) {
     if (!/matchme/.test(value)) {
       return new TypeError(`${propName} must matchme, but you supplied ${String(value)}`);
     }
@@ -82,6 +82,30 @@ const result = Types.checkTypes(UserType, {
 // the object does not match the type definition
 ```
 
+## Example in Express/Restify
+
+You can use this as a validator in your node services like follows:
+
+```javascript
+import Types from 'types-verifier';
+
+const UserType = {
+   fistName: Types.string.isRequired,
+   lastName: Types.string.isRequired,
+   isAdmin: Types.boolean,
+};
+
+app.post('/user', (req, res, next) => {
+  const error = Types.checkTypes(UserType, req.body);
+  
+  if (error) {
+    next(error);
+    return;
+  }
+  
+  // do stuff with req.body
+});
+```
 
 ## Motivation
 
